@@ -1,5 +1,6 @@
 :root {
   font-family:
+    'Kanit',
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
@@ -15,7 +16,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   /* background-color: #242424; */
-  background-color: #181818;
+  background-color: #1a1a1a;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -27,7 +28,7 @@
   scroll-behavior: smooth;
   box-sizing: border-box;
   margin: 0;
-  scrollbar-color: #181818 #242424;
+  scrollbar-color: #00d8ff20 #181818;
   scrollbar-width: thin;
 }
 
@@ -41,4 +42,18 @@ body {
     color: #213547;
     background-color: #c8c8c8;
   }
+}
+
+@font-face {
+  font-family: 'Kanit';
+  src: url('/src/assets/fonts/Kanit-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kanit';
+  src: url('/src/assets/fonts/Kanit-Medium.ttf') format('truetype');
+  font-weight: bold;
+  font-style: bold;
 }

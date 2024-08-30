@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import './App.css'
 import { SortBy } from './components/SortBy'
-import { Header } from './components/header'
+import { Header } from './components/Header'
 import { useIntObserver } from './hooks/useIntObserver'
 import { AsideMenu } from './components/MobileMenu'
 import { MobileMenuProvider } from './context/MobileMenuContext'

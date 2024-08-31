@@ -1,11 +1,29 @@
 .sort-container {
   height: calc(100% - 44px);
   display: grid;
+  gap: 1rem;
   place-items: center;
+}
+
+.sort-select {
+  display: flex;
+  gap: 1rem;
+  && select {
+    border-color: #181818;
+  }
+  && select:focus {
+    border-color: #181818; /* Color del borde cuando está enfocado */
+    outline: none;
+  }
+  && option {
+    background-color: #282828;
+  }
 }
 
 .characters-grid {
   display: grid;
+  place-items: center;
+  min-height: 22rem;
   width: 50rem;
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));

@@ -81,9 +81,9 @@ export const AsideMenu: React.FC<AsideMenuProps> = ({ activeSection }) => {
           </li>
           <li
             onClick={handleClickLi}
-            className={`opt-utilities ${activeSection === '' ? 'active' : ''}`}
+            className={`opt-utilities ${activeSection === 'section4' ? 'active' : ''}`}
           >
-            <a href='#'>4. Paginación</a>
+            <a href='#section4'>4. Paginación</a>
           </li>
         </ul>
       </nav>

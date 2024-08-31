@@ -17,7 +17,7 @@ export const useIntObserver = (
     const observer = new IntersectionObserver(fnCallBack, {
       root: null,
       rootMargin: '0px',
-      threshold: 0.75
+      threshold: 0.45
     })
 
     if (sectionsRef.current)

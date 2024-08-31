@@ -29,14 +29,21 @@ function App() {
               id='section2'
               ref={(el) => (sectionsRef.current[1] = el)}
             >
-              <SortBy />
+              Dos
             </section>
             <section
               className='section-utility'
               id='section3'
               ref={(el) => (sectionsRef.current[2] = el)}
             >
-              <SortBy />
+              Tres
+            </section>
+            <section
+              className='section-utility'
+              id='section4'
+              ref={(el) => (sectionsRef.current[3] = el)}
+            >
+              Cuatro
             </section>
           </section>
         </main>

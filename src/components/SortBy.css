@@ -1,0 +1,46 @@
+.sort-container {
+  height: calc(100% - 44px);
+  display: grid;
+  place-items: center;
+}
+
+.characters-grid {
+  display: grid;
+  width: 50rem;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  background-color: #181818;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  && img {
+    width: 100%;
+  }
+
+  && span {
+    text-align: center;
+    display: block;
+    height: 3rem;
+    font-size: smaller;
+  }
+}
+
+@media (width <= 1400px) {
+  .characters-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    width: 40rem;
+  }
+}
+
+@media (width <= 1200px) {
+  .characters-grid {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    width: 35rem;
+  }
+}
+
+@media (width <= 800px) {
+  .characters-grid {
+    width: 20rem;
+  }
+}

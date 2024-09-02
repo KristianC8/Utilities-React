@@ -5,9 +5,13 @@
   place-items: center;
 }
 
-.sort-select {
+.sort-search {
   display: flex;
   gap: 1rem;
+  && .form-search {
+    display: flex;
+    gap: 1rem;
+  }
   && select {
     border-color: #181818;
   }

@@ -11,6 +11,7 @@ export const SortBy = () => {
   const [characters, setCharacters] = useState<character[]>([])
   const [isLoading, setIsLoading] = useState<boolean>()
   const [sort, setSort] = useState<string>('--')
+  const [form, setForm] = useState<string>('')
 
   useEffect(() => {
     const getData = async () => {
@@ -38,30 +39,61 @@ export const SortBy = () => {
     setSort(event.target.value)
   }
 
-  const sortedCharacters = (sort: string) => {
-    if (sort === '--') return characters
+  const sortedCharacters = (sort: string, form: string) => {
+    let searchCharacters = characters
+    if (form === '') {
+      searchCharacters = characters
+    } else {
+      searchCharacters =
+        characters.filter((character) =>
+          character.name.toLowerCase().includes(form.toLowerCase())
+        ) ?? []
+    }
+    if (sort === '--') return searchCharacters
     if (sort === 'a-z') {
-      return [...characters].sort((a, b) => a.name.localeCompare(b.name))
+      return [...searchCharacters].sort((a, b) => a.name.localeCompare(b.name))
     }
     if (sort === 'z-a') {
-      return [...characters].sort((b, a) => a.name.localeCompare(b.name))
+      return [...searchCharacters].sort((b, a) => a.name.localeCompare(b.name))
     }
     if (sort === 'id+') {
-      return [...characters].sort((a, b) => a.id - b.id)
+      return [...searchCharacters].sort((a, b) => a.id - b.id)
     }
     if (sort === 'id-') {
-      return [...characters].sort((b, a) => a.id - b.id)
+      return [...searchCharacters].sort((b, a) => a.id - b.id)
     }
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newQuery = e.target.value
+    setForm(newQuery)
+  }
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
   }
 
   return (
     <>
       <h3>Ordenar:</h3>
       <div className='sort-container'>
-        <div className='sort-select'>
+        <div className='sort-search'>
+          <form className='form-search' onSubmit={handleSubmit}>
+            <label htmlFor='filter'>Buscar:</label>
+            <input
+              id='filter'
+              name='filter'
+              type='text'
+              placeholder='personaje ...'
+              onChange={handleChange}
+              value={form}
+            />
+          </form>
           <label htmlFor='ordenar'>Ordenar por:</label>
           <select id='ordenar' name='ordenar' onChange={changedSelect}>
-            <option defaultValue='--'>--</option>
+            <option defaultValue='--' hidden>
+              --
+            </option>
             <option value='a-z'>A - Z</option>
             <option value='z-a'>Z - A</option>
             <option value='id+'>Id ⬆️</option>
@@ -73,7 +105,7 @@ export const SortBy = () => {
           <Loader />
         ) : (
           <section className='characters-grid'>
-            {sortedCharacters(sort)?.map((character) => (
+            {sortedCharacters(sort, form)?.map((character) => (
               <article key={character.id}>
                 <span>{character.name}</span>
                 <img src={character.image} alt={character.name} />

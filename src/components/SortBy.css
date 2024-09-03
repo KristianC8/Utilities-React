@@ -33,7 +33,7 @@
 .characters-grid {
   display: grid;
   place-items: center;
-  min-height: 22rem;
+  min-height: 22.08rem;
   width: 50rem;
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));

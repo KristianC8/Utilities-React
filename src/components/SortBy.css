@@ -30,10 +30,14 @@
   }
 }
 
+.section1-container {
+  min-height: 27.09rem;
+}
+
 .characters-grid {
   display: grid;
   place-items: center;
-  min-height: 22.08rem;
+  min-height: 22rem;
   width: 50rem;
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -54,6 +58,9 @@
 }
 
 @media (width <= 1400px) {
+  .section1-container {
+    min-height: 22.09rem;
+  }
   .characters-grid {
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     width: 40rem;

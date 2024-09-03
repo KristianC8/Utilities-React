@@ -104,21 +104,23 @@ export const SortBy = () => {
           </div>
         </div>
 
-        {isLoading ? (
-          <Loader />
-        ) : sortedCharacters(sort, form)?.length === 0 ? (
-          <span>No se encontraron resultados para la busqueda</span>
-        ) : (
-          <section className='characters-grid'>
-            {sortedCharacters(sort, form)?.map((character) => (
-              <article key={character.id}>
-                <span>{character.name}</span>
-                <img src={character.image} alt={character.name} />
-                Id:{` ${character.id}`}
-              </article>
-            ))}
-          </section>
-        )}
+        <div className='section1-container'>
+          {isLoading ? (
+            <Loader />
+          ) : sortedCharacters(sort, form)?.length === 0 ? (
+            <span>No se encontraron resultados para la busqueda</span>
+          ) : (
+            <section className='characters-grid'>
+              {sortedCharacters(sort, form)?.map((character) => (
+                <article key={character.id}>
+                  <span>{character.name}</span>
+                  <img src={character.image} alt={character.name} />
+                  Id:{` ${character.id}`}
+                </article>
+              ))}
+            </section>
+          )}
+        </div>
       </div>
     </>
   )

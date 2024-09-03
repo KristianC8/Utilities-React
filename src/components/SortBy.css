@@ -59,7 +59,7 @@
 
 @media (width <= 1400px) {
   .section1-container {
-    min-height: 22.09rem;
+    min-height: 23.75rem;
   }
   .characters-grid {
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
@@ -68,6 +68,9 @@
 }
 
 @media (width <= 1200px) {
+  .section1-container {
+    min-height: 22.09rem;
+  }
   .characters-grid {
     grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
     width: 35rem;

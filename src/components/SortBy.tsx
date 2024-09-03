@@ -49,6 +49,7 @@ export const SortBy = () => {
           character.name.toLowerCase().includes(form.toLowerCase())
         ) ?? []
     }
+
     if (sort === '--') return searchCharacters
     if (sort === 'a-z') {
       return [...searchCharacters].sort((a, b) => a.name.localeCompare(b.name))
@@ -89,31 +90,37 @@ export const SortBy = () => {
               value={form}
             />
           </form>
-          <label htmlFor='ordenar'>Ordenar por:</label>
-          <select id='ordenar' name='ordenar' onChange={changedSelect}>
-            <option defaultValue='--' hidden>
-              --
-            </option>
-            <option value='a-z'>A - Z</option>
-            <option value='z-a'>Z - A</option>
-            <option value='id+'>Id ⬆️</option>
-            <option value='id-'>Id ⬇️</option>
-          </select>
+          <div className='sort-select'>
+            <label htmlFor='ordenar'>Ordenar por:</label>
+            <select id='ordenar' name='ordenar' onChange={changedSelect}>
+              <option defaultValue='--' hidden>
+                --
+              </option>
+              <option value='a-z'>A - Z</option>
+              <option value='z-a'>Z - A</option>
+              <option value='id+'>Id ⬆️</option>
+              <option value='id-'>Id ⬇️</option>
+            </select>
+          </div>
         </div>
 
-        {isLoading ? (
-          <Loader />
-        ) : (
-          <section className='characters-grid'>
-            {sortedCharacters(sort, form)?.map((character) => (
-              <article key={character.id}>
-                <span>{character.name}</span>
-                <img src={character.image} alt={character.name} />
-                Id:{` ${character.id}`}
-              </article>
-            ))}
-          </section>
-        )}
+        <div className='section1-container'>
+          {isLoading ? (
+            <Loader />
+          ) : sortedCharacters(sort, form)?.length === 0 ? (
+            <span>No se encontraron resultados para la busqueda</span>
+          ) : (
+            <section className='characters-grid'>
+              {sortedCharacters(sort, form)?.map((character) => (
+                <article key={character.id}>
+                  <span>{character.name}</span>
+                  <img src={character.image} alt={character.name} />
+                  Id:{` ${character.id}`}
+                </article>
+              ))}
+            </section>
+          )}
+        </div>
       </div>
     </>
   )

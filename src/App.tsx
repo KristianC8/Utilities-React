@@ -1,10 +1,10 @@
 import { useRef } from 'react'
 import './App.css'
-import { SortBy } from './components/SortBy'
 import { Header } from './components/Header'
 import { useIntObserver } from './hooks/useIntObserver'
 import { AsideMenu } from './components/MobileMenu'
 import { MobileMenuProvider } from './context/MobileMenuContext'
+import { ExpandCard } from './components/ExpandCard'
 
 function App() {
   const sectionsRef = useRef<(HTMLElement | null)[]>([])
@@ -22,7 +22,7 @@ function App() {
               id='section1'
               ref={(el) => (sectionsRef.current[0] = el)}
             >
-              <SortBy />
+              <ExpandCard />
             </section>
             <section
               className='section-utility'

@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <header className='header-main'>
       <div className='header-main-title'>
-        <h1>Utilidades React</h1>
+        <h1>Componentes React</h1>
         <ReactIcon />
       </div>
       <MobileMenu />

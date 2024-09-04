@@ -60,13 +60,13 @@
 .expand-btn {
   height: 0.5rem;
   width: 1rem;
-  background-color: aliceblue;
+  background-color: #ffffff50;
   border-radius: 0.5rem;
   cursor: pointer;
 }
 
 .expand-btn.active {
-  background-color: #00d8ff20;
+  background-color: aliceblue;
 }
 
 @media (width <= 900px) {

@@ -72,7 +72,7 @@
   .aside-utilities.isOpen {
     transform: translateY(0);
     visibility: visible;
-    transition: linear 0.8s;
+    transition: linear 0.4s;
     /* opacity: 1; */
   }
 }

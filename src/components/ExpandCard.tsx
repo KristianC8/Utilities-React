@@ -19,27 +19,27 @@ export const ExpandCard = () => {
     {
       id: 0,
       text: 'Discover the world',
-      url: '/img/Machu.jpg'
+      url: '/img/Machu.avif'
     },
     {
       id: 1,
       text: 'Forest',
-      url: '/img/Forest.jpg'
+      url: '/img/Forest.avif'
     },
     {
       id: 2,
       text: 'Beach',
-      url: '/img/Beach.jpg'
+      url: '/img/Beach.avif'
     },
     {
       id: 3,
       text: 'City',
-      url: '/img/City.jpg'
+      url: '/img/City.avif'
     },
     {
       id: 4,
       text: 'Mountains - Clouds',
-      url: '/img/Mountains.jpg'
+      url: '/img/Mountains.avif'
     }
   ]
 

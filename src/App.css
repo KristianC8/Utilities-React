@@ -19,6 +19,7 @@ main {
 }
 
 .section-utility {
+  align-content: center;
   scroll-margin-top: 3.5rem;
   margin-top: 3.5rem;
   background-color: #1f1f1f;

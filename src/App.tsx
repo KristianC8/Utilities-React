@@ -28,9 +28,7 @@ function App() {
               className='section-utility'
               id='section2'
               ref={(el) => (sectionsRef.current[1] = el)}
-            >
-              Dos
-            </section>
+            ></section>
             <section
               className='section-utility'
               id='section3'

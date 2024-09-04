@@ -123,7 +123,7 @@ export const ExpandCard = () => {
       <div
         className='expand-big'
         style={{
-          width: `${isFulfilled ? `calc(100% * ${images.length})` : '100%'} `
+          width: `${isFulfilled ? `calc(100% * ${images.length})` : '100%'}`
         }}
         ref={expandBig}
       >
@@ -138,8 +138,8 @@ export const ExpandCard = () => {
             className={`expand-panel ${isActive === image.id ? 'active' : ''}`}
             style={{
               backgroundImage: `url(${image.url})`,
-              // width: `${isFulfilled ? `calc(100% / ${images.length} - 1em)` : ''}`
-              width: `${isFulfilled ? `calc(100% / ${images.length})` : ''}`
+              width: `${isFulfilled ? `calc((100% / ${images.length}) - 1rem)` : ''}`
+              // width: `${isFulfilled ? `calc(100% / ${images.length})` : ''}`
             }}
           >
             <h3>{image.text}</h3>

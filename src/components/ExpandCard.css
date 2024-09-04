@@ -82,18 +82,21 @@
   .expand-big {
     height: 100%;
     /* width: 500%; */
-    /* justify-content: space-between; */
-    gap: 0;
+    justify-content: space-between;
+    gap: 1rem;
     transform: translateX(0%);
-    transition: 600ms ease-in all;
-    -webkit-transition: 600ms ease-in all;
+    transition: 700ms ease all;
+    -webkit-transition: 700ms ease all;
   }
 
   .expand-panel {
     /* width: calc(100% / 5 - 1em); */
     height: 100%;
+    /* width: 20%; */
     background-color: chocolate;
     cursor: default;
     flex: none;
+    transition: none;
+    -webkit-transition: none;
   }
 }

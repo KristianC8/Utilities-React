@@ -19,32 +19,32 @@ export const ExpandCard = () => {
     {
       id: 0,
       text: 'Discover the world',
-      // url: '/img/Machu.avif'
-      url: 'https://iili.io/dkpZrsS.jpg'
+      url: '/img/Machu.avif'
+      // url: 'https://iili.io/dkpZrsS.jpg'
     },
     {
       id: 1,
       text: 'Forest',
-      // url: '/img/Forest.avif'
-      url: 'https://iili.io/dkpZ8b4.jpg'
+      url: '/img/Forest.avif'
+      // url: 'https://iili.io/dkpZ8b4.jpg'
     },
     {
       id: 2,
       text: 'Beach',
-      // url: '/img/Beach.avif'
-      url: 'https://iili.io/dkpZeJs.jpg'
+      url: '/img/Beach.avif'
+      // url: 'https://iili.io/dkpZeJs.jpg'
     },
     {
       id: 3,
       text: 'City',
-      // url: '/img/City.avif'
-      url: 'https://iili.io/dkpZk5G.jpg'
+      url: '/img/City.avif'
+      // url: 'https://iili.io/dkpZk5G.jpg'
     },
     {
       id: 4,
       text: 'Mountains',
-      // url: '/img/Mountains.avif'
-      url: 'https://iili.io/dkpZvef.jpg'
+      url: '/img/Mountains.avif'
+      // url: 'https://iili.io/dkpZvef.jpg'
     }
   ]
 

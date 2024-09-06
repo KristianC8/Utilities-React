@@ -1,52 +1,25 @@
+/* eslint-disable react/prop-types */
 import { useState, useRef, useEffect } from 'react'
 import './ExpandCard.css'
 import { useResponsive } from '../hooks/useResponsive'
 
-export const ExpandCard = () => {
-  interface MyObject {
-    id: number
-    text: string
-    url: string
-  }
+interface Images {
+  id: number
+  text: string
+  url: string
+}
+
+interface ImagesListProps {
+  images: Images[]
+}
+
+export const ExpandCard: React.FC<ImagesListProps> = ({ images }) => {
   const [isActive, setIsActive] = useState<number>(0)
   const { isFulfilled } = useResponsive('(width <= 900px)')
   const expandBig = useRef<HTMLDivElement>(null)
   const isDraggingRef = useRef<boolean>(false)
   const startXRef = useRef<number>(0)
   const currentXRef = useRef<number>(0)
-
-  const images: MyObject[] = [
-    {
-      id: 0,
-      text: 'Discover the world',
-      url: '/img/Machu.avif'
-      // url: 'https://iili.io/dkpZrsS.jpg'
-    },
-    {
-      id: 1,
-      text: 'Forest',
-      url: '/img/Forest.avif'
-      // url: 'https://iili.io/dkpZ8b4.jpg'
-    },
-    {
-      id: 2,
-      text: 'Beach',
-      url: '/img/Beach.avif'
-      // url: 'https://iili.io/dkpZeJs.jpg'
-    },
-    {
-      id: 3,
-      text: 'City',
-      url: '/img/City.avif'
-      // url: 'https://iili.io/dkpZk5G.jpg'
-    },
-    {
-      id: 4,
-      text: 'Mountains',
-      url: '/img/Mountains.avif'
-      // url: 'https://iili.io/dkpZvef.jpg'
-    }
-  ]
 
   const handleStart = (clientX: number) => {
     startXRef.current = clientX

@@ -40,6 +40,24 @@ interface AsideMenuProps {
 // eslint-disable-next-line react/prop-types
 export const AsideMenu: React.FC<AsideMenuProps> = ({ activeSection }) => {
   const { isOpen, setIsOpen } = useMobileMenuCtx()
+  const listMenu = [
+    {
+      id: 1,
+      option: '1. Expand Card'
+    },
+    {
+      id: 2,
+      option: '2. Infinite Slider'
+    },
+    {
+      id: 3,
+      option: '3'
+    },
+    {
+      id: 4,
+      option: '4'
+    }
+  ]
   const handleClickLi = () => {
     setIsOpen(!isOpen)
   }
@@ -61,30 +79,15 @@ export const AsideMenu: React.FC<AsideMenuProps> = ({ activeSection }) => {
     <aside className={`aside-utilities ${isOpen ? 'isOpen' : ''}`}>
       <nav>
         <ul className='list-utilities'>
-          <li
-            onClick={handleClickLi}
-            className={`opt-utilities ${activeSection === 'section1' ? 'active' : ''}`}
-          >
-            <a href='#section1'>1. Expand Card</a>
-          </li>
-          <li
-            onClick={handleClickLi}
-            className={`opt-utilities ${activeSection === 'section2' ? 'active' : ''}`}
-          >
-            <a href='#section2'>2. Dos</a>
-          </li>
-          <li
-            onClick={handleClickLi}
-            className={`opt-utilities ${activeSection === 'section3' ? 'active' : ''}`}
-          >
-            <a href='#section3'>3. Tres</a>
-          </li>
-          <li
-            onClick={handleClickLi}
-            className={`opt-utilities ${activeSection === 'section4' ? 'active' : ''}`}
-          >
-            <a href='#section4'>4. Cuatro</a>
-          </li>
+          {listMenu.map((option) => (
+            <li
+              key={option.id}
+              onClick={handleClickLi}
+              className={`opt-utilities ${activeSection === `section${option.id}` ? 'active' : ''}`}
+            >
+              <a href={`#section${option.id}`}>{option.option}</a>
+            </li>
+          ))}
         </ul>
       </nav>
     </aside>

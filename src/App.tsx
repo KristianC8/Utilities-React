@@ -5,6 +5,9 @@ import { useIntObserver } from './hooks/useIntObserver'
 import { AsideMenu } from './components/MobileMenu'
 import { MobileMenuProvider } from './context/MobileMenuContext'
 import { ExpandCard } from './components/ExpandCard'
+import images from './mocks/images.json'
+import imagesSlider from './mocks/imagesSlider.json'
+import { SliderImages } from './components/SliderImages'
 
 function App() {
   const sectionsRef = useRef<(HTMLElement | null)[]>([])
@@ -22,20 +25,20 @@ function App() {
               id='section1'
               ref={(el) => (sectionsRef.current[0] = el)}
             >
-              <ExpandCard />
+              <ExpandCard images={images} />
             </section>
             <section
               className='section-utility'
               id='section2'
               ref={(el) => (sectionsRef.current[1] = el)}
-            ></section>
+            >
+              <SliderImages images={imagesSlider} />
+            </section>
             <section
               className='section-utility'
               id='section3'
               ref={(el) => (sectionsRef.current[2] = el)}
-            >
-              Tres
-            </section>
+            ></section>
             <section
               className='section-utility'
               id='section4'

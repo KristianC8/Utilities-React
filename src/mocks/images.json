@@ -1,0 +1,27 @@
+[
+  {
+    "id": 0,
+    "text": "Discover the world",
+    "url": "/img/Machu.avif"
+  },
+  {
+    "id": 1,
+    "text": "Forest",
+    "url": "/img/Forest.avif"
+  },
+  {
+    "id": 2,
+    "text": "Beach",
+    "url": "/img/Beach.avif"
+  },
+  {
+    "id": 3,
+    "text": "City",
+    "url": "/img/City.avif"
+  },
+  {
+    "id": 4,
+    "text": "Mountains",
+    "url": "/img/Mountains.avif"
+  }
+]

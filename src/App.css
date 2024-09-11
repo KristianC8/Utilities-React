@@ -28,6 +28,10 @@ main {
   min-height: calc(100dvh - 4.5rem);
   border-radius: 0.5rem;
   padding: 1rem;
+
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 10% entry 100%;
 }
 
 #section2 {

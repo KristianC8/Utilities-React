@@ -56,3 +56,18 @@ body {
   font-weight: bold;
   font-style: bold;
 }
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes progress {
+  to {
+    width: 100%;
+  }
+}

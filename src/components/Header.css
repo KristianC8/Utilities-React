@@ -14,7 +14,7 @@ h1 {
   padding: 0 1rem;
   background-color: #00d8ff20;
   /* background-color: #7bb4b420; */
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   /* border-radius: 0 0 0.5rem 0.5rem; */
   z-index: 2;
 }
@@ -23,6 +23,17 @@ h1 {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.header-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.05rem;
+  background-color: #00d8ff90;
+  width: 0%;
+  /* animation: progress linear both;
+  animation-timeline: scroll(root block); */
 }
 
 @media (width <= 480px) {

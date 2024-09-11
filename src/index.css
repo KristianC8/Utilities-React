@@ -36,12 +36,12 @@ body {
   min-width: 320px;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #c8c8c8;
   }
-}
+} */
 
 @font-face {
   font-family: 'Kanit';

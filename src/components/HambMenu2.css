@@ -1,28 +1,15 @@
-.section-menuHamb {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  place-items: center;
+.HambMenu2-container {
+  height: 80px;
+  width: 80px;
 }
 
-.HambMenu-container {
-  height: 100px;
-  width: 100px;
-}
-
-.menu--1 {
+.HambMenu2 {
   position: relative;
   width: 100%;
   padding-top: 100%;
 }
 
-.HambMenu-svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.HambMenu-label {
+.HambMenu2-label {
   display: block;
   cursor: pointer;
   position: absolute;
@@ -33,18 +20,11 @@
   overflow: hidden;
 }
 
-.HambMenu-input {
+.HambMenu2-input {
   display: none;
 }
 
-/* @media (min-aspect-ratio: 1/1) {
-  .HambMenu-label {
-    width: 50vh;
-    height: 50vh;
-  }
-} */
-
-.HambMenu-path {
+.HambMenu2-path {
   fill: none;
   stroke: #ffffff;
   stroke-width: 3;
@@ -56,16 +36,18 @@
   stroke-dashoffset: var(--offset);
   transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-  transform: scale(1.4); /* Aumenta el tamaño general */
+  transform: scale(
+    1.4
+  ); /* Aumenta el tamaño general para agranda el icono del menu */
   transform-origin: center; /* Centra la escala para mantener la posición */
 }
 
-circle {
+.HambMenu2-circle {
   fill: #fff3;
   opacity: 0;
 }
 
-.HambMenu-label:hover circle {
+.HambMenu2-label:hover circle {
   opacity: 1;
 }
 
@@ -79,28 +61,26 @@ circle {
   }
 }
 
-.back input:checked + svg {
+.menu--2 {
   .line--1,
   .line--3 {
-    --length: 8.602325267;
-  }
-}
-
-.menu--1 {
-  .line--1,
-  .line--3 {
-    --total-length: 126.64183044433594;
+    --total-length: 111.22813415527344;
+    --offset: -50.22813415527344;
   }
   .line--2 {
-    --total-length: 70;
+    --total-length: 99;
   }
   input:checked + svg {
+    path {
+      transform: translateX(42px) scale(1.4); /* Aumenta el tamaño general para agranda el icono del menu */
+      transform-origin: center; /* Centra la escala para mantener la posición */
+    }
     .line--1,
     .line--3 {
-      --offset: -94.1149185097;
+      --offset: -16.9705627485;
     }
     .line--2 {
-      --offset: -50;
+      --offset: -20;
     }
   }
 }

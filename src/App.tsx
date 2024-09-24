@@ -8,7 +8,8 @@ import { ExpandCard } from './components/ExpandCard'
 import images from './mocks/images.json'
 import imagesSlider from './mocks/imagesSlider.json'
 import { SliderImages } from './components/SliderImages'
-import { HambMenus } from './components/HambMenus'
+import { HambMenu1 } from './components/HambMenu1'
+import { HambMenu2 } from './components/HambMenu2'
 
 function App() {
   const sectionsRef = useRef<(HTMLElement | null)[]>([])
@@ -40,7 +41,12 @@ function App() {
               id='section3'
               ref={(el) => (sectionsRef.current[2] = el)}
             >
-              <HambMenus />
+              <div className='section-utility-center'>
+                <div className='section-utility-HambMenus'>
+                  <HambMenu1 />
+                  <HambMenu2 />
+                </div>
+              </div>
             </section>
             <section
               className='section-utility'

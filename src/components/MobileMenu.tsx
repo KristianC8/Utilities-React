@@ -51,7 +51,7 @@ export const AsideMenu: React.FC<AsideMenuProps> = ({ activeSection }) => {
     },
     {
       id: 3,
-      option: '3'
+      option: '3. Menu mobile'
     },
     {
       id: 4,
